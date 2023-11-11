@@ -1,0 +1,28 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "name": "(lldb) Launch",
+            "preLaunchTask": "g++ build", // 这个要和task的label名保持一致
+            "type": "cppdbg",//调试类型cppdbg可以lldb或者gdb调试，cppvsdbg是vs内部的调试器
+            "request": "launch", 
+            "program": "${fileDirname}/${fileBasenameNoExtension}.out",//这个和task输出文件的路径保持一致。
+            "args": [],
+            "stopAtEntry": true, //默认false无断点，这里开启停止进入main()
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,  //不适用外部的终端，用vscode的终端。
+            "MIMode": "lldb", //指明需要链接的调试器
+            // "logging": {
+            //     //   "engineLogging": true,
+            //     "trace": true,
+            //     "traceResponse": true,
+            // }
+            
+        }
+    ]
+}
