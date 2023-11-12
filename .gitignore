@@ -1,8 +1,10 @@
 # Macos 
 .DS_Store
 
-# output directory
+# Directories
 output/
+*.dSYM/
+
 
 # Prerequisites
 *.d
