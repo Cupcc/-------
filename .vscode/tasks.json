@@ -2,16 +2,18 @@
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "C/C++: clang build active file",
-            "command": "/usr/bin/clang",
+            "label": "C/C++: clang build active file", //默认最好不要修改
+            "command": "/usr/bin/g++",
             "args": [
-                "-fcolor-diagnostics",
-                "-fansi-escape-codes",
+                "-fcolor-diagnostics", //使用颜色
+                "-fansi-escape-codes", //格式化输出调试结果
                 "-std=c++20",
+                "-stdlib=libc++",
+
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "${fileDirname}/${fileBasenameNoExtension}.out"
             ],
             "options": {
                 "cwd": "${fileDirname}"
