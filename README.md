@@ -1,5 +1,6 @@
 # 代码随想录
-
+笔记链接，主要方便个人学习和查看，会中英文混编。
+https://cuis-workshop.gitbook.io/algorithm-code/
 ## Day 1
 ## Day 2
 
