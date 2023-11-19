@@ -19,7 +19,7 @@ struct ListNode {
 class Solution {
  public:
   ListNode* removeNthFromEnd(ListNode* head, int n) {
-    //直接操作，需要边缘处理
+    // 直接操作，需要边缘处理
     size_t size = 0;
     ListNode* cur = head;
     while (cur != nullptr) {
@@ -27,8 +27,8 @@ class Solution {
       cur = cur->next;
     }
     // 头节点删除的边缘处理
-    if (n == size){
-        return head->next;
+    if (n == size) {
+      return head->next;
     }
     cur = head;
     ListNode* pre = nullptr;
@@ -40,6 +40,26 @@ class Solution {
     delete cur;
     cur = nullptr;
     return head;
+  }
+  // dummy head
+  ListNode* removeNthFromEnd2(ListNode* head, int n) {
+    ListNode* dummyHead = new ListNode();
+    dummyHead->next = head;
+    size_t size = 0;
+    ListNode* cur = dummyHead;
+    while (cur->next != nullptr) {
+      cur = cur->next;
+      size++;
+    }
+    cur = dummyHead;
+    for (size_t i = 0; i < size - n; i++) {
+      cur = cur->next;
+    }
+    ListNode* tmp = cur->next;
+    cur->next = cur->next->next;
+    delete tmp;
+    tmp = nullptr;
+    return dummyHead->next;
   }
 };
 int main() { return 0; }
