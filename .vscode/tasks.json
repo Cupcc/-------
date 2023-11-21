@@ -12,7 +12,11 @@
         "-g",
         "${file}",
         "-o",
-        "${fileDirname}/${fileBasenameNoExtension}.out"
+        "${fileDirname}/${fileBasenameNoExtension}.out",
+        "-I${workspaceFolder}/include", // 头文件路径
+        "-L${workspaceFolder}/lib", // 库文件路径
+        "-lgtest_main", //指定链接的库文件
+        "-lgtest"
       ],
       "options": {
         "cwd": "${fileDirname}"
