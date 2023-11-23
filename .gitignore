@@ -7,7 +7,7 @@ tmp/
 # Directories
 output/
 *.dSYM/
-
+build
 
 # Prerequisites
 *.d
