@@ -29,16 +29,15 @@ class Solution {
       high--;
     }
   }
-} void reverseString(vector<char>& s) {
-  int low = 0, high = s.size() - 1;
-  while (low < high) {
-    char tmp = s[high];
-    s[high] = s[low];
-    s[low] = tmp;
-    low++;
-    high--;
+  void reverseString(vector<char>& s) {
+    int low = 0, high = s.size() - 1;
+    while (low < high) {
+      char tmp = s[high];
+      s[high] = s[low];
+      s[low] = tmp;
+      low++;
+      high--;
+    }
   }
-}
-}
-;
+};
 int main() { return 0; }
