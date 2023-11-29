@@ -1,14 +1,15 @@
 # Temp
-temp/
-tmp/
+temp
+tmp
 # Macos 
 .DS_Store
 
 # Directories
-output/
-*.dSYM/
+output
+*.dSYM
 build
-.idea/
+/.idea
+
 
 # Prerequisites
 *.d
