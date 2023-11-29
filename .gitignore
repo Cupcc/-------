@@ -8,6 +8,7 @@ tmp/
 output/
 *.dSYM/
 build
+.idea/
 
 # Prerequisites
 *.d
