@@ -7,7 +7,18 @@
         "unordered_map": "cpp",
         "string": "cpp",
         "iosfwd": "cpp",
-        "filesystem": "cpp"
+        "filesystem": "cpp",
+        "stack": "cpp",
+        "__split_buffer": "cpp",
+        "deque": "cpp",
+        "iomanip": "cpp",
+        "istream": "cpp",
+        "list": "cpp",
+        "locale": "cpp",
+        "sstream": "cpp",
+        "__string": "cpp",
+        "queue": "cpp",
+        "__config": "cpp"
     },
 
 }
