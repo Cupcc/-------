@@ -5,7 +5,9 @@
         "algorithm": "cpp",
         "set": "cpp",
         "unordered_map": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "iosfwd": "cpp",
+        "filesystem": "cpp"
     },
 
 }
