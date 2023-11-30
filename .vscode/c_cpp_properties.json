@@ -4,7 +4,7 @@
             "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/build-arm/include"
+                "${workspaceFolder}/build-macos-arm64/include"
             ],
             "defines": [],
             "macFrameworkPath": [
