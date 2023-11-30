@@ -1,8 +1,13 @@
+
+# build
+build
+
 # Temp
 temp
 tmp
 # Macos 
 .DS_Store
+
 
 # Directories
 output
@@ -35,8 +40,7 @@ build
 # Compiled Static libraries
 *.lai
 *.la
-*.a
-*.lib
+
 
 # Executables
 *.exec
