@@ -1,51 +1,40 @@
-import requests
-import json
+from openai import OpenAI
 
-apiUrl = ' https://chatapi.onechat.fun/v1/chat/completions'
-apiKey = 'sk-6yJ5qOik53kgvuEU87Ba522aEe134a95962f4b171a55273f'
-temperature = 1.0
-max_tokens = 600
-model = 'gpt-4'
+apiUrl = 'https://ssapi.onechat.shop/v1'
+apiKey = 'sk-j0lQuKMEF3UlB9Hu1e9aAc6d661e47D28b96E7Dd2aFc801b'
 
-headers = {
-    'Accept': 'application/json',
-    'Content-Type': 'application/json',
-    'Authorization': 'Bearer ' + apiKey
-}
+# openai.api_base = apiUrl
+# openai.api_key = apiKey
+# prompt = "python3 使用request库调用chatgpt api,如何实现stream output in console"
+prompt = "翻译一下：文件描述符"
 
-post = {
-    'model': model,
+model = "gpt-4-1106-preview"
 
-    'max_tokens': max_tokens,
-    'temperature': temperature,
-    'messages': [
+client = OpenAI(
+    api_key=apiKey,
+    base_url=apiUrl,
+)
+
+stream = client.chat.completions.create(
+    messages=[
         {
-            'role': 'system',
-            'content': '请输入你的提示信息'
+            "role":
+            "system",
+            "content":
+            "You act as an embedded development expert who helps me to build programs."
         },
         {
-            'role': 'user',
-            'content': '鲁迅和周树人是什么关系'
-        }
-    ]
-}
-
-
-try:
-    response = requests.post(
-        apiUrl,
-        headers=headers,
-        data=json.dumps(post),
-        timeout=None
-    )
-    print(f"Response status code: {response.status_code}")
-
-    if response.status_code == 200:
-        if response.text:
-            print(response.json())
-        else:
-            print("The response is empty.")
-    else:
-        print(f"Request failed, response content: {response.text}")
-except Exception as e:
-    print('Error:', e)
+            "role": "user",
+            "content": prompt
+        },
+    ],
+    model=model,
+    stream=True,
+)
+print(next(stream))
+if stream:
+    for chunk in stream:
+        if chunk.choices[0].delta.content is not None:
+            print(chunk.choices[0].delta.content, end="", flush=True)
+else:
+    print("Failed to request.")
