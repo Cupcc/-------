@@ -4,7 +4,7 @@
             "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/build-macos-arm64/include"
+                "${workspaceFolder}/build-macos-arm64/include" // gtest path
             ],
             "defines": [],
             "macFrameworkPath": [

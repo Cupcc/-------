@@ -13,7 +13,7 @@
       "externalConsole": false,
       "MIMode": "lldb",
       "preLaunchTask": "C/C++: clang build active file"
-    },
+    }
   ],
   "logging": {
     "trace": true,
