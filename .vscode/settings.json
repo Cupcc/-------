@@ -1,5 +1,6 @@
 {
     "files.associations": {
+        "*.cpp": "cpp",
         "vector": "cpp",
         "iostream": "cpp",
         "algorithm": "cpp",
@@ -19,7 +20,8 @@
         "__string": "cpp",
         "queue": "cpp",
         "__config": "cpp",
-        "forward_list": "cpp"
+        "forward_list": "cpp",
+        "ios": "cpp"
     },
 
 }
