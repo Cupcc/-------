@@ -21,7 +21,8 @@
         "queue": "cpp",
         "__config": "cpp",
         "forward_list": "cpp",
-        "ios": "cpp"
+        "ios": "cpp",
+        "stacktrace": "cpp"
     },
 
 }
