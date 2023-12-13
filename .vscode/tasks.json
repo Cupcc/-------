@@ -1,4 +1,5 @@
 {
+  // 配置编译任务
   "tasks": [
     {
       "type": "cppbuild",
@@ -16,7 +17,9 @@
         "-I${workspaceFolder}/build-macos-arm64/include", // 头文件路径
         "-L${workspaceFolder}/build-macos-arm64/lib", // 库文件路径
         "-lgtest_main", //指定链接的库文件
-        "-lgtest"
+        "-lgtest",//链接库
+        "-lgmock", //链接mock库
+        "-lgmock_main"
       ],
       "options": {
         "cwd": "${fileDirname}"

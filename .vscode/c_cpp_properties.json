@@ -1,6 +1,7 @@
 {
     "configurations": [
         {
+            // 配置智能代码提示和完成
             "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/**",
