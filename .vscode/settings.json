@@ -22,7 +22,19 @@
         "__config": "cpp",
         "forward_list": "cpp",
         "ios": "cpp",
-        "stacktrace": "cpp"
+        "stacktrace": "cpp",
+        "__bit_reference": "cpp",
+        "__hash_table": "cpp",
+        "__tree": "cpp",
+        "array": "cpp",
+        "hash_map": "cpp",
+        "initializer_list": "cpp",
+        "map": "cpp",
+        "span": "cpp",
+        "string_view": "cpp",
+        "unordered_set": "cpp",
+        "format": "cpp",
+        "ranges": "cpp"
     },
 
 }
