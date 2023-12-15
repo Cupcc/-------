@@ -30,6 +30,7 @@ class Solution {
   bool isValidBST(TreeNode* root) {
     vec.clear();
     inorderTraversal(root);
+    // is_sorted()是反向判断的，你输入a<b，他会判断 b < a? 如果false 则继续判断下一个
     return std::is_sorted(vec.begin(), vec.end(),
                           [](int a, int b) { return a <= b; });
   }
