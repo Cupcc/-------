@@ -27,7 +27,8 @@ class Defer {
 };
 
 #define CAT(x, y) (x##y)
-#define DEFER(func) Defer CAT(defer_, __LINE__)([&]() { func; })
+#define CAT_INTER(x, y) CAT(x, y)
+#define DEFER(func) Defer CAT_INTER(defer_, __LINE__)([&]() { func; })
 
 void deleteTreeNode(TreeNode* node) { delete node; }
 
@@ -42,29 +43,18 @@ class Solution {
     //       2. 右子树空 返回左子树
     //       3. 子树为空，返回nullptr
     //       4. 都不空，将左子树插入到右子树的最左侧。
-    if (root == nullptr) return root;
+    if (!root) return root;
     if (root->val == key) {
       TreeNode* retNode;
       DEFER(deleteTreeNode(root));
-      if (root->left == nullptr) {
-        retNode = root->right;
-        return retNode;
-      }
-      if (root->right == nullptr) {
-        retNode = root->left;
-        return retNode;
-      }
-      if (!root->left && !root->right) {
-        return nullptr;
-      } else {
+      if (root->left && root->right) {
         TreeNode* cur = root->right;
-        while (cur->left != nullptr) {
-          cur = cur->left;
-        }
+        while (cur->left) cur = cur->left;
         cur->left = root->left;
         retNode = root->right;
-        return retNode;
-      }
+      } else
+        retNode = root->left ? root->left : root->right;
+      return retNode;
     }
     if (key < root->val) root->left = deleteNode(root->left, key);
     if (key > root->val) root->right = deleteNode(root->right, key);
