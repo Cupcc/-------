@@ -94,6 +94,4 @@
         "thread": "cpp",
         "cinttypes": "cpp"
     },
-    "C_Cpp.errorSquiggles": "disabled",
-
 }
