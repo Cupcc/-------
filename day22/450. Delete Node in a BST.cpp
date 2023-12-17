@@ -34,15 +34,17 @@ void deleteTreeNode(TreeNode* node) { delete node; }
 
 class Solution {
  public:
-  // 如果需要node节点，那么
-  // 把node的左子树，插入到右子树的最左侧，
+  /// @brief
+  // 空  返回root
+  // 不空==val：删除该节点, 判断左右孩子
+  /// @param root
+  /// @param key
+  /// @return
+  // 返回： 1. 左右孩子都不空，将左子树插入到右子树的最左侧。
+  //       2. 左子树空，返回右子树
+  //       2. 右子树空 返回左子树
+  //       3. 子树为空，返回nullptr
   TreeNode* deleteNode(TreeNode* root, int key) {
-    // 空
-    // 不空==val：删除该节点
-    // 返回： 1.左子树空返回右子树
-    //       2. 右子树空 返回左子树
-    //       3. 子树为空，返回nullptr
-    //       4. 都不空，将左子树插入到右子树的最左侧。
     if (!root) return root;
     if (root->val == key) {
       TreeNode* retNode;
