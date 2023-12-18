@@ -21,10 +21,8 @@ def request_gpt(args):
     stream = client.chat.completions.create(
         messages=[
             {
-                "role":
-                "system",
-                "content":
-                "You act as an embedded development expert who helps me to build programs."
+                "role": "system",
+                "content": ""
             },
             {
                 "role": "user",
@@ -53,8 +51,8 @@ def parse_arguments():
         type=str,
         default="gpt-4-1106-preview",
         choices=[
-            'gpt-3.5-turbo', 'gpt-3.5-1106', 'gpt-4', 'gpt-4-1106-preview',
-            'gpt-4-32k'
+            'gpt-4-all', 'gpt-4.5-turbo', 'gpt-3.5-turbo', 'gpt-3.5-1106',
+            'gpt-4', 'gpt-4-1106-preview', 'gpt-4-32k'
         ],
         help='The model name.',
     )
