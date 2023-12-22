@@ -94,4 +94,26 @@
         "thread": "cpp",
         "cinttypes": "cpp"
     },
+    "C_Cpp.clang_format_style": "./.clang-format",
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "clangd.checkUpdates": true,
+    "clangd.arguments": [
+        "--log=verbose", 
+        "-j=1",
+        "--clang-tidy", 
+        "--pretty", 
+        "--background-index",
+        "--query-driver=/usr/bin/clang++",
+        "--completion-parse=auto", // 当 clangd 准备就绪时，用它来分析建议
+        "--completion-style=detailed",
+        "-pch-storage=memory",
+        "--fallback-style=Google"
+    ],
+    "clangd.fallbackFlags": [
+        "-std=c++20",
+        "-Wall",
+        "-stdlib=libc++"
+    ],
+    // 当修改的时候，自动重启
+    "clangd.onConfigChanged": "restart",
 }
