@@ -1,2 +1,4 @@
 BasedOnStyle: Google
 AllowShortIfStatementsOnASingleLine: AllIfsAndElse
+# AllowShortIfStatementsOnASingleLine: false
+BreakBeforeBinaryOperators: All
