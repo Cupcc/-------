@@ -1,11 +1,13 @@
 from openai import OpenAI
 import argparse
+import json
 
 
 def request_gpt(args):
-    apiUrl = 'https://ssapi.onechat.shop/v1'
-    apiKey = 'sk-j0lQuKMEF3UlB9Hu1e9aAc6d661e47D28b96E7Dd2aFc801b'
 
+    apiUrl = 'https://ssapi.onechat.shop'
+    # apiKey = 'sk-j0lQuKMEF3UlB9Hu1e9aAc6d661e47D28b96E7Dd2aFc801b'
+    apiKey = 'sk-nvMujcvedYNi8t6VA13f76829cF14a2a84D6F64042B04cB2'
     # openai.api_base = apiUrl
     # openai.api_key = apiKey
     # prompt = "python3 使用request库调用chatgpt api,如何实现stream output in console"
@@ -15,7 +17,7 @@ def request_gpt(args):
 
     client = OpenAI(
         api_key=apiKey,
-        base_url=apiUrl,
+        base_url=apiUrl + '/v1',
     )
 
     stream = client.chat.completions.create(
@@ -31,14 +33,20 @@ def request_gpt(args):
         ],
         model=model,
         stream=True,
-    )
+        response_format={"type": "json_object"})
+    # print(type(stream))
     print(next(stream))
     if stream:
         for chunk in stream:
             if chunk.choices[0].delta.content is not None:
                 print(chunk.choices[0].delta.content, end="", flush=True)
+
     else:
         print("Failed to request.")
+
+    # # write in file
+    # with open('data.json', 'w') as f:
+    #     json.dump(stream, f)
 
 
 def parse_arguments():
