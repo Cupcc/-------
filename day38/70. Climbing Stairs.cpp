@@ -26,14 +26,19 @@ class Solution {
     return second;
   }
   int climbStairs2(int n) {
+    if (n < 3) return n;
     vector<int> dp(n + 2, 0);
+    // 方便计数，规定的
     dp[0] = 1;
     // dp[i] 为上到第i个台阶的方法数
     for (int i = 0; i < n; ++i) {
       // 从前向后推导
+      // 走一步
       dp[i + 1] += dp[i];
+      // 走两步
       dp[i + 2] += dp[i];
     }
+    // 注意是第n个台阶
     return dp[n];
   }
 };
