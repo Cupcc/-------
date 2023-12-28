@@ -2,3 +2,5 @@ BasedOnStyle: Google
 AllowShortIfStatementsOnASingleLine: AllIfsAndElse
 # AllowShortIfStatementsOnASingleLine: false
 BreakBeforeBinaryOperators: All
+
+PenaltyBreakComment: 100000000 # 对换行的惩罚值，默认300。值越高，越不换行

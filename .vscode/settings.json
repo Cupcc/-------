@@ -1,119 +1,223 @@
 {
-    "files.associations": {
-        "*.cpp": "cpp",
-        "vector": "cpp",
-        "iostream": "cpp",
-        "algorithm": "cpp",
-        "set": "cpp",
-        "unordered_map": "cpp",
-        "string": "cpp",
-        "iosfwd": "cpp",
-        "filesystem": "cpp",
-        "stack": "cpp",
-        "__split_buffer": "cpp",
-        "deque": "cpp",
-        "iomanip": "cpp",
-        "istream": "cpp",
-        "list": "cpp",
-        "locale": "cpp",
-        "sstream": "cpp",
-        "__string": "cpp",
-        "queue": "cpp",
-        "__config": "cpp",
-        "forward_list": "cpp",
-        "ios": "cpp",
-        "stacktrace": "cpp",
-        "__bit_reference": "cpp",
-        "__hash_table": "cpp",
-        "__tree": "cpp",
-        "array": "cpp",
-        "hash_map": "cpp",
-        "initializer_list": "cpp",
-        "map": "cpp",
-        "span": "cpp",
-        "string_view": "cpp",
-        "unordered_set": "cpp",
-        "format": "cpp",
-        "ranges": "cpp",
-        "__bits": "cpp",
-        "__debug": "cpp",
-        "__errc": "cpp",
-        "__locale": "cpp",
-        "__mutex_base": "cpp",
-        "__node_handle": "cpp",
-        "__nullptr": "cpp",
-        "__threading_support": "cpp",
-        "__tuple": "cpp",
-        "any": "cpp",
-        "atomic": "cpp",
-        "bit": "cpp",
-        "bitset": "cpp",
-        "cctype": "cpp",
-        "charconv": "cpp",
-        "chrono": "cpp",
-        "clocale": "cpp",
-        "cmath": "cpp",
-        "compare": "cpp",
-        "complex": "cpp",
-        "concepts": "cpp",
-        "condition_variable": "cpp",
-        "cstdarg": "cpp",
-        "cstddef": "cpp",
-        "cstdint": "cpp",
-        "cstdio": "cpp",
-        "cstdlib": "cpp",
-        "cstring": "cpp",
-        "ctime": "cpp",
-        "cwchar": "cpp",
-        "cwctype": "cpp",
-        "exception": "cpp",
-        "limits": "cpp",
-        "memory": "cpp",
-        "mutex": "cpp",
-        "new": "cpp",
-        "numbers": "cpp",
-        "numeric": "cpp",
-        "optional": "cpp",
-        "ostream": "cpp",
-        "random": "cpp",
-        "ratio": "cpp",
-        "semaphore": "cpp",
-        "stdexcept": "cpp",
-        "streambuf": "cpp",
-        "system_error": "cpp",
-        "tuple": "cpp",
-        "type_traits": "cpp",
-        "typeinfo": "cpp",
-        "variant": "cpp",
-        "*.tcc": "cpp",
-        "functional": "cpp",
-        "iterator": "cpp",
-        "memory_resource": "cpp",
-        "utility": "cpp",
-        "stop_token": "cpp",
-        "thread": "cpp",
-        "cinttypes": "cpp"
-    },
-    "C_Cpp.clang_format_style": "./.clang-format",
-    "C_Cpp.intelliSenseEngine": "disabled",
-    "clangd.checkUpdates": true,
-    "clangd.arguments": [
-        // "--log=verbose", 
-        "-j=2",
-        "--clang-tidy", 
-        "--pretty", 
-        "--background-index",
-        "--query-driver=/usr/bin/clang++",
-        "--completion-parse=auto", // 当 clangd 准备就绪时，用它来分析建议
-        "--completion-style=detailed",
-        "-pch-storage=memory",
-        "--fallback-style=Google",
-    ],
-    "clangd.fallbackFlags": [
-        "-std=c++20",
-        "-Wall",
-        "-stdlib=libc++",
-    ],
-    // 当修改的时候，自动重启
-    "clangd.onConfigChanged": "restart",
+  "files.associations": {
+    "*.cpp": "cpp",
+    "vector": "cpp",
+    "iostream": "cpp",
+    "algorithm": "cpp",
+    "set": "cpp",
+    "unordered_map": "cpp",
+    "string": "cpp",
+    "iosfwd": "cpp",
+    "filesystem": "cpp",
+    "stack": "cpp",
+    "__split_buffer": "cpp",
+    "deque": "cpp",
+    "iomanip": "cpp",
+    "istream": "cpp",
+    "list": "cpp",
+    "locale": "cpp",
+    "sstream": "cpp",
+    "__string": "cpp",
+    "queue": "cpp",
+    "__config": "cpp",
+    "forward_list": "cpp",
+    "ios": "cpp",
+    "stacktrace": "cpp",
+    "__bit_reference": "cpp",
+    "__hash_table": "cpp",
+    "__tree": "cpp",
+    "array": "cpp",
+    "hash_map": "cpp",
+    "initializer_list": "cpp",
+    "map": "cpp",
+    "span": "cpp",
+    "string_view": "cpp",
+    "unordered_set": "cpp",
+    "format": "cpp",
+    "ranges": "cpp",
+    "__bits": "cpp",
+    "__debug": "cpp",
+    "__errc": "cpp",
+    "__locale": "cpp",
+    "__mutex_base": "cpp",
+    "__node_handle": "cpp",
+    "__nullptr": "cpp",
+    "__threading_support": "cpp",
+    "__tuple": "cpp",
+    "any": "cpp",
+    "atomic": "cpp",
+    "bit": "cpp",
+    "bitset": "cpp",
+    "cctype": "cpp",
+    "charconv": "cpp",
+    "chrono": "cpp",
+    "clocale": "cpp",
+    "cmath": "cpp",
+    "compare": "cpp",
+    "complex": "cpp",
+    "concepts": "cpp",
+    "condition_variable": "cpp",
+    "cstdarg": "cpp",
+    "cstddef": "cpp",
+    "cstdint": "cpp",
+    "cstdio": "cpp",
+    "cstdlib": "cpp",
+    "cstring": "cpp",
+    "ctime": "cpp",
+    "cwchar": "cpp",
+    "cwctype": "cpp",
+    "exception": "cpp",
+    "limits": "cpp",
+    "memory": "cpp",
+    "mutex": "cpp",
+    "new": "cpp",
+    "numbers": "cpp",
+    "numeric": "cpp",
+    "optional": "cpp",
+    "ostream": "cpp",
+    "random": "cpp",
+    "ratio": "cpp",
+    "semaphore": "cpp",
+    "stdexcept": "cpp",
+    "streambuf": "cpp",
+    "system_error": "cpp",
+    "tuple": "cpp",
+    "type_traits": "cpp",
+    "typeinfo": "cpp",
+    "variant": "cpp",
+    "*.tcc": "cpp",
+    "functional": "cpp",
+    "iterator": "cpp",
+    "memory_resource": "cpp",
+    "utility": "cpp",
+    "stop_token": "cpp",
+    "thread": "cpp",
+    "cinttypes": "cpp"
+  },
+  "C_Cpp.clang_format_style": "./.clang-format",
+  "C_Cpp.intelliSenseEngine": "disabled",
+  "clangd.checkUpdates": true,
+  "clangd.arguments": [
+    // "--log=verbose",
+    "-j=2",
+    "--clang-tidy",
+    "--pretty",
+    "--background-index",
+    "--query-driver=/usr/bin/clang++",
+    "--completion-parse=auto", // 当 clangd 准备就绪时，用它来分析建议
+    "--completion-style=detailed",
+    "-pch-storage=memory",
+    "--fallback-style=Google"
+  ],
+  "clangd.fallbackFlags": ["-std=c++20", "-Wall", "-stdlib=libc++"],
+  // 当修改好clangd设置后，手动重启cmd+shift+p
+
+  "doxdocgen.c.triggerSequence": "///",
+
+  // The prefix that is used for each comment line except for first and last.
+  "doxdocgen.c.commentPrefix": " * ",
+
+  // Smart text snippet for factory methods/functions.
+  "doxdocgen.c.factoryMethodText": "Create a {name} object",
+
+  // The first line of the comment that gets generated. If empty it won't get generated at all.
+  "doxdocgen.c.firstLine": "/**",
+
+  // Smart text snippet for getters.
+  "doxdocgen.c.getterText": "Get the {name} object",
+
+  // The last line of the comment that gets generated. If empty it won't get generated at all.
+  "doxdocgen.c.lastLine": " */",
+
+  // Smart text snippet for setters.
+  "doxdocgen.c.setterText": "Set the {name} object",
+
+  // Smart text snippet for constructors.
+  "doxdocgen.cpp.ctorText": "Construct a new {name} object",
+
+  // Smart text snippet for destructors.
+  "doxdocgen.cpp.dtorText": "Destroy the {name} object",
+
+  // The template of the template parameter Doxygen line(s) that are generated. If empty it won't get generated at all.
+  "doxdocgen.cpp.tparamTemplate": "@tparam {param} ",
+
+  // Additional file documentation. One tag per line will be added. Can template `{year}`, `{date}`, `{author}`, `{email}` and `{file}`. You have to specify the prefix.
+  "doxdocgen.file.customTag": ["@see "],
+
+  // The order to use for the file comment. Values can be used multiple times. Valid values are shown in default setting.
+  "doxdocgen.file.fileOrder": [
+    "file",
+    "brief",
+    "empty",
+    "author",
+    "date",
+    // "version",
+    // "empty",
+//    "copyright",
+    // "empty",
+    "custom"
+  ],
+
+  // The template for the file parameter in Doxygen.
+  "doxdocgen.file.fileTemplate": "@file {name}",
+
+  // Version number for the file.
+  "doxdocgen.file.versionTag": "@version 0.1",
+
+
+  // Set the name of the author.  Replaces {author}.
+  "doxdocgen.generic.authorName": "Chris",
+
+  // Set the style of the author tag and your name.  Can template {author} and {email}.
+  "doxdocgen.generic.authorTag": "@author {author}",
+
+  // If this is enabled a bool return value will be split into true and false return param.
+  "doxdocgen.generic.boolReturnsTrueFalse": true,
+
+  // The template of the brief Doxygen line that is generated. If empty it won't get generated at all.
+  "doxdocgen.generic.briefTemplate": "@brief {text}",
+
+  // The format to use for the date.
+  "doxdocgen.generic.dateFormat": "YYYY-MM-DD",
+
+  // The template for the date parameter in Doxygen.
+  "doxdocgen.generic.dateTemplate": "@date {date}",
+
+  // Decide if you want to get smart text for certain commands.
+  "doxdocgen.generic.generateSmartText": true,
+
+  // Whether include type information at return.
+  "doxdocgen.generic.includeTypeAtReturn": true,
+
+  // How many lines the plugin should look for to find the end of the declaration. Please be aware that setting this value too low could improve the speed of comment generation by a very slim margin but the plugin also may not correctly detect all declarations or definitions anymore.
+  "doxdocgen.generic.linesToGet": 20,
+
+  // The order to use for the comment generation. Values can be used multiple times. Valid values are shown in default setting.
+  "doxdocgen.generic.order": [
+    "brief",
+    "empty",
+    "tparam",
+    "param",
+    "return",
+    "custom",
+  ],
+
+  // Custom tags to be added to the generic order. One tag per line will be added. Can template `{year}`, `{date}`, `{author}`, `{email}` and `{file}`. You have to specify the prefix.
+  "doxdocgen.generic.customTags": [],
+
+  // The template of the param Doxygen line(s) that are generated. If empty it won't get generated at all.
+  "doxdocgen.generic.paramTemplate": "@param {param} ",
+
+  // The template of the return Doxygen line that is generated. If empty it won't get generated at all.
+  "doxdocgen.generic.returnTemplate": "@return {type} ",
+
+  // Decide if the values put into {name} should be split according to their casing.
+  "doxdocgen.generic.splitCasingSmartText": true,
+
+  // Array of keywords that should be removed from the input prior to parsing.
+  "doxdocgen.generic.filteredKeywords": [],
+
+  // Provide intellisense and snippet for doxygen commands
+  "doxdocgen.generic.commandSuggestion": true,
+
 }
