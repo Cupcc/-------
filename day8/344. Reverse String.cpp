@@ -29,7 +29,7 @@ class Solution {
       high--;
     }
   }
-  void reverseString(vector<char>& s) {
+  void _reverseString(vector<char>& s) {
     int low = 0, high = s.size() - 1;
     while (low < high) {
       char tmp = s[high];
