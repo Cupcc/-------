@@ -1,5 +1,8 @@
 package main
 
+import "fmt"
+
+// @see https://leetcode.cn/problems/edit-distance/
 // \brief  最小编辑
 func minDistance(word1 string, word2 string) int {
 	m, n := len(word1), len(word2)
@@ -25,4 +28,10 @@ func minDistance(word1 string, word2 string) int {
 		}
 	}
 	return dp[m][n]
+}
+
+func main() {
+	word1 := "horse"
+	word2 := "ros"
+	fmt.Println(minDistance(word1, word2) == 3) // Example usage
 }

@@ -1,4 +1,7 @@
 go 1.21.5
+
 use (
-  ./mygolang
+	./day56
+	./day57
+	./mygolang
 )
