@@ -1,22 +1,21 @@
 from openai import OpenAI
 import argparse
-import json
 
 
 def request_gpt(args):
 
-    apiUrl = 'https://ssapi.onechat.shop'
+    apiUrl = 'https://chatapi.onechat.fun'
     # apiKey = 'sk-j0lQuKMEF3UlB9Hu1e9aAc6d661e47D28b96E7Dd2aFc801b'
-    apiKey = 'sk-nvMujcvedYNi8t6VA13f76829cF14a2a84D6F64042B04cB2'
-    # openai.api_base = apiUrl
-    # openai.api_key = apiKey
+    apiKey = 'sk-JKtZDlDvRdLWS6NO284eC95b32984360A89dC5Ba6618B33d'
+    
+    claude_api_key = 'sk-UQpJHKYi68Qn2fj0F8B23c5481F0460981Ac74B66f560317'
+    # apiUrl = f'https://onechat.fun/'
+    
     # prompt = "python3 使用request库调用chatgpt api,如何实现stream output in console"
     prompt = args.prompt
-
     model = args.model
-
     client = OpenAI(
-        api_key=apiKey,
+        api_key= apiKey or claude_api_key,
         base_url=apiUrl + '/v1',
     )
 
@@ -58,10 +57,6 @@ def parse_arguments():
         '-m',
         type=str,
         default="gpt-4-1106-preview",
-        choices=[
-            'gpt-4-all', 'gpt-4.5-turbo', 'gpt-3.5-turbo', 'gpt-3.5-1106',
-            'gpt-4', 'gpt-4-1106-preview', 'gpt-4-32k'
-        ],
         help='The model name.',
     )
     parser.add_argument(
